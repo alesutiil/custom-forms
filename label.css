@@ -1,0 +1,10 @@
+:root {
+
+	--label-font-size: var(--form-font-size);
+	--label-font-family: var(--form-font-family);
+	--label-text-color: var(--form-text-color);
+	--label-line-height: var(--form-font-line-height);
+	--label-font-weight: 500;
+
+	--label-margin-bottom: 8px;
+}

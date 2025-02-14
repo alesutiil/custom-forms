@@ -1,0 +1,20 @@
+:root {
+
+	--textarea-font-size: var(--form-font-size);
+	--textarea-font-family: var(--form-font-family);
+
+	--textarea-text-color: var(--form-text-color);
+	--textarea-text-color-placeholder: var(--form-text-color-placeholder);
+	--textarea-background-color: var(--form-background-color);
+
+	--textarea-border-size: var(--form-border-size);
+	--textarea-border-color: var(--form-border-color);
+	--textarea-border-rounded: var(--form-border-rounded);
+	--textarea-border-color-focus: var(--form-border-color-focus);
+
+	--textarea-width: 100%;
+	--textarea-min-height: 120px;
+
+	--textarea-padding-x: 12px;
+	--textarea-padding-y: 10px;
+}

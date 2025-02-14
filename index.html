@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+	<title>Document</title>
+
+
+	<style type="text/tailwindcss">
+
+		@theme {
+			--form-font-size: 16px;
+			--form-font-family: inherit;
+			--form-font-line-height: 1.2;
+
+			--form-text-color: #000;
+			--form-text-color-placeholder: #ccc;
+			--form-background-color: #fff;
+
+			--form-border-size: 1px;
+			--form-border-color: #ccc;
+			--form-border-rounded: 8px;
+			--form-border-color-focus: #000;
+		}
+
+
+
+		/* Si todo está bien definido, nada debajo de este comentario debe modificarse. */
+
+		.form-label {
+			@apply inline-block cursor-pointer
+			 text-(length:--input-font-size) font-(family-name:--input-font-family) leading-(--label-line-height) text-(--input-text-color) font-(--label-font-weight)
+			 mb-(--label-margin-bottom);
+		}
+
+		.form-input {
+			@apply
+			 block appearance-none
+			 text-(length:--input-font-size) font-(family-name:--input-font-family)
+			 text-(--input-text-color) bg-(--input-background-color) placeholder:text-(--input-text-color-placeholder)
+			 border-(length:--input-border-size) border-(--input-border-color) rounded-(--input-border-rounded)
+			 w-(--input-width) h-(--input-height)
+			 px-(--input-padding-x)
+			 focus:outline-none focus:border-(--input-border-color-focus);
+		}
+
+		.form-textarea {
+			@apply block appearance-none resize-none field-sizing-content
+			 text-(length:--textarea-font-size) font-(family-name:--textarea-font-family)
+			 text-(--textarea-text-color) bg-(--textarea-background-color) placeholder:text-(--textarea-text-color-placeholder)
+			 border-(length:--textarea-border-size) border-(--textarea-border-color) rounded-(--textarea-border-rounded)
+			 w-(--textarea-width) min-h-(--textarea-min-height)
+			 px-(--textarea-padding-x) py-(--textarea-padding-y)
+			 focus:outline-none focus:border-(--input-border-color-focus);
+		}
+
+		.form-radio {
+
+		}
+
+		.form-radio + label {
+
+		}
+
+		.form-check,
+		.form-checkbox {
+			@apply appearance-none relative cursor-pointer
+			 border-(length:--check-border-size) border-(--check-border-color) rounded-(--check-border-rounded)
+			 w-(--check-width) h-(--check-height)
+			 focus:outline-none checked:border-(--check-border-color-focus);
+		}
+
+
+		.form-check::before,
+  		.form-checkbox::before {
+    		@apply content-[''] absolute inset-0 transition-all;
+  		}
+
+  		.form-check:checked::before,
+  		.form-checkbox:checked::before {
+			@apply bg-(--check-mark-background-color) border-(--check-mark-background-color)
+  		}
+
+		.form-check:checked::after,
+		.form-checkbox:checked::after {
+			@apply content-[''] absolute inset-0 m-auto bg-no-repeat
+			 w-(--check-mark-width) h-(--check-mark-height);
+
+			background-image: url('data:image/svg+xml;utf8,<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>');
+			filter: var(--check-mark-color);
+		}
+
+		.form-check + label,
+		.form-checkbox + label {
+			@apply cursor-pointer;
+		}
+
+	</style>
+
+	<link rel="stylesheet" href="./input.css">
+	<link rel="stylesheet" href="./textarea.css">
+	<link rel="stylesheet" href="./check.css">
+	<link rel="stylesheet" href="./label.css">
+
+</head>
+
+	<body>
+		<form class="mx-20 mt-20">
+			<h1 class="text-zinc-700 font-semibold text-4xl/none mb-12">Formulario contacto</h1>
+			<div class="grid grid-cols-12 gap-x-5 gap-y-4">
+				<div class="col-span-6">
+					<label class="form-label" for="nombre">Nombre</label>
+					<input class="form-input" type="text" placeholder="placeholder nombre">
+				</div>
+				<div class="col-span-6">
+					<label class="form-label" for="nombre">Email</label>
+					<input class="form-input" type="email" placeholder="placeholder email">
+				</div>
+				<div class="col-span-6">
+					<label class="form-label" for="nombre">Teléfono</label>
+					<input class="form-input" type="tel" placeholder="placeholder teléfono">
+				</div>
+				<div class="col-span-6">
+					<label class="form-label" for="nombre">Número</label>
+					<input class="form-input" type="number" placeholder="placeholder número">
+				</div>
+				<div class="col-span-6">
+					<label class="form-label" for="select">Un select</label>
+					<select id="select" name="select">
+						<option value="0" disabled selected>Selecciona una opción</option>
+						<option value="1">Un elemento</option>
+						<option value="2">Otro elemento</option>
+					</select>
+				</div>
+				<div class="col-span-12">
+					<label class="form-label" for="textarea">Soy un textarea</label>
+					<textarea class="form-textarea" name="textarea" id="textarea" placeholder="placeholder textarea"></textarea>
+				</div>
+				<div class="col-span-12">
+					<div class="flex items-start space-x-2">
+						<input class="form-checkbox mt-0.5" id="check1" type="checkbox">
+						<label for="check1">el label del check</label>
+					</div>
+				</div>
+			</div>
+
+
+			<button type="submit" class="bg-indigo-500 text-white rounded px-4 py-2.5 mt-5">enviar</button>
+		</form>
+	</body>
+
+</html>
