@@ -6,5 +6,25 @@
 	--label-line-height: var(--form-font-line-height);
 	--label-font-weight: 500;
 
-	--label-margin-bottom: 8px;
+	--label-margin-bottom: calc(var(--form-font-size) / 2);
+
+	--label-check-font-size: var(--form-font-size);
+	--label-check-font-family: var(--form-font-family);
+	--label-check-text-color: var(--form-text-color);
+	--label-check-line-height: var(--form-font-line-height);
+	--label-check-font-weight: 400;
+	--label-check-margin-bottom: 0;
+
+	--label-check-checked-text-color: var(--form-text-color);
+	--label-check-checked-font-weight: 600;
+
+	--label-radio-font-size: var(--form-font-size);
+	--label-radio-font-family: var(--form-font-family);
+	--label-radio-text-color: var(--form-text-color);
+	--label-radio-line-height: var(--form-font-line-height);
+	--label-radio-font-weight: 400;
+	--label-radio-margin-bottom: 0;
+
+	--label-radio-checked-text-color: var(--form-text-color);
+	--label-radio-checked-font-weight: 600;
 }

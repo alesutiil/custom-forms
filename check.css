@@ -1,26 +1,23 @@
 :root {
 
-	--check-text-color: var(--form-text-color);
 	--check-background-color: var(--form-background-color);
 
 	--check-border-size: var(--form-border-size);
 	--check-border-color: var(--form-border-color);
 	--check-border-rounded: 2px;
-	--check-border-color-checked: var(--form-border-color-focus);
 
-	--check-width: 20px;
-	--check-height: 20px;
+	--check-size: 20px;
 
-	/* Pequeño fix para centrar un poco el check con la primera línea del label debido al interlineado */
-	--check-margin-top: 0.5px;
+	--check-checked-border-color: var(--form-border-color-focus);
+	--check-checked-background-color: #000;
+
 
 	/* Icono check */
-	--check-mark-width: 16px;
-	--check-mark-height: 16px;
+	--check-icon-width: 16px;
+	--check-icon-height: 16px;
 	/*
 		La otra forma de hacer el color customizable (y mucho más sencilla) es mediante el uso de "mask", pero no es compatible con todos los navegadores.
 		Para convertir el color hexadecimal a este filtro, usar este conversor: https://isotropic.co/tool/hex-color-to-css-filter/
 	*/
-	--check-mark-color: invert(77%) sepia(0%) saturate(3716%) hue-rotate(198deg) brightness(119%) contrast(107%);
-	--check-mark-background-color: #000;
+	--check-icon-color: invert(77%) sepia(0%) saturate(3716%) hue-rotate(198deg) brightness(119%) contrast(107%);
 }

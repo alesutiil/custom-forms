@@ -31,7 +31,7 @@
 
 		.form-label {
 			@apply inline-block cursor-pointer
-			 text-(length:--input-font-size) font-(family-name:--input-font-family) leading-(--label-line-height) text-(--input-text-color) font-(--label-font-weight)
+			 text-(length:--label-font-size) font-(family-name:--label-font-family) leading-(--label-line-height) text-(--label-text-color) font-(--label-font-weight)
 			 mb-(--label-margin-bottom);
 		}
 
@@ -56,6 +56,26 @@
 			 focus:outline-none focus:border-(--input-border-color-focus);
 		}
 
+		.form-select {
+			@apply block appearance-none cursor-pointer
+			 text-(--select-text-color) bg-(--select-background-color)
+			 border-(length:--select-border-size) border-(--select-border-color) rounded-(--select-border-rounded)
+			 w-(--select-width) h-(--select-height)
+			 px-(--select-padding-left) pr-(--select-padding-right)
+			 focus:outline-none focus:border-(--select-border-color-focus)
+			 bg-(image:--select-icon) bg-no-repeat bg-(length:--select-icon-size) bg-(position:--select-icon-position);
+		}
+
+		/* Ocultar la flecha en IE */
+		.form-select::-ms-expand {
+			display: none;
+		}
+
+
+
+
+
+
 		.form-radio {
 
 		}
@@ -66,12 +86,12 @@
 
 		.form-check,
 		.form-checkbox {
-			@apply appearance-none relative cursor-pointer
+			@apply appearance-none relative cursor-pointer shrink-0
+			 bg-(--check-background-color)
 			 border-(length:--check-border-size) border-(--check-border-color) rounded-(--check-border-rounded)
-			 w-(--check-width) h-(--check-height)
+			 size-(--check-size)
 			 focus:outline-none checked:border-(--check-border-color-focus);
 		}
-
 
 		.form-check::before,
   		.form-checkbox::before {
@@ -80,29 +100,32 @@
 
   		.form-check:checked::before,
   		.form-checkbox:checked::before {
-			@apply bg-(--check-mark-background-color) border-(--check-mark-background-color)
+			@apply bg-(--check-checked-background-color) border-(--check-checked-border-color);
   		}
 
 		.form-check:checked::after,
 		.form-checkbox:checked::after {
 			@apply content-[''] absolute inset-0 m-auto bg-no-repeat
-			 w-(--check-mark-width) h-(--check-mark-height);
+			 w-(--check-icon-width) h-(--check-icon-height);
 
 			background-image: url('data:image/svg+xml;utf8,<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>');
-			filter: var(--check-mark-color);
+			filter: var(--check-icon-color);
 		}
 
 		.form-check + label,
 		.form-checkbox + label {
-			@apply cursor-pointer;
+			@apply cursor-pointer
+			 text-(length:--label-check-font-size) font-(family-name:--label-check-font-family) font-(--label-check-font-weight)
+			 text-(--label-check-text-color) leading-(--label-check-line-height) mb-(--label-check-margin-bottom);
 		}
 
 	</style>
 
+	<link rel="stylesheet" href="./label.css">
 	<link rel="stylesheet" href="./input.css">
 	<link rel="stylesheet" href="./textarea.css">
 	<link rel="stylesheet" href="./check.css">
-	<link rel="stylesheet" href="./label.css">
+	<link rel="stylesheet" href="./select.css">
 
 </head>
 
@@ -115,24 +138,32 @@
 					<input class="form-input" type="text" placeholder="placeholder nombre">
 				</div>
 				<div class="col-span-6">
-					<label class="form-label" for="nombre">Email</label>
+					<label class="form-label" for="email">Email</label>
 					<input class="form-input" type="email" placeholder="placeholder email">
 				</div>
 				<div class="col-span-6">
-					<label class="form-label" for="nombre">Teléfono</label>
+					<label class="form-label" for="tel">Teléfono</label>
 					<input class="form-input" type="tel" placeholder="placeholder teléfono">
 				</div>
 				<div class="col-span-6">
-					<label class="form-label" for="nombre">Número</label>
+					<label class="form-label" for="number">Número</label>
 					<input class="form-input" type="number" placeholder="placeholder número">
 				</div>
 				<div class="col-span-6">
 					<label class="form-label" for="select">Un select</label>
-					<select id="select" name="select">
+					<select class="form-select" id="select" name="select">
 						<option value="0" disabled selected>Selecciona una opción</option>
 						<option value="1">Un elemento</option>
 						<option value="2">Otro elemento</option>
 					</select>
+				</div>
+				<div class="col-span-6">
+					<label class="form-label" for="disabled">Estoy disabled</label>
+					<input class="form-input" type="text" placeholder="placeholder número" value="Estoy desactivado" disabled>
+				</div>
+				<div class="col-span-6">
+					<label class="form-label" for="readonly">Estoy readonly</label>
+					<input class="form-input" type="text" placeholder="placeholder número" value="Soy readonly" readonly>
 				</div>
 				<div class="col-span-12">
 					<label class="form-label" for="textarea">Soy un textarea</label>
@@ -140,8 +171,10 @@
 				</div>
 				<div class="col-span-12">
 					<div class="flex items-start space-x-2">
-						<input class="form-checkbox mt-0.5" id="check1" type="checkbox">
-						<label for="check1">el label del check</label>
+						<input class="form-checkbox" id="check1" type="checkbox">
+						<label for="check1" class="form-label">
+							el label del check el label del check el label del check el label del check el label del check el label del check el label del check el label del check el label del check el label del check el label del check el label del check el label del check
+						</label>
 					</div>
 				</div>
 			</div>
