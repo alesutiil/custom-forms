@@ -15,11 +15,11 @@
 	--select-height: 40px;
 
 	--select-padding-left: 12px;
-	--select-padding-right: 2px;
+	--select-padding-right: calc(var(--select-icon-size) + 25px);
 
 	/* Icono select */
 	/* Hay que convertir la imagen a base64 (https://base64.guru/converter/encode/image/svg) */
-	--select-icon: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEyIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xMC4yOTMgMC4yOTI5NjlMNS45OTk5NyA0LjU4NTk3TDEuNzA2OTcgMC4yOTI5NjlMMC4yOTI5NjkgMS43MDY5N0w1Ljk5OTk3IDcuNDEzOTdMMTEuNzA3IDEuNzA2OTdMMTAuMjkzIDAuMjkyOTY5WiIgZmlsbD0iYmxhY2siLz4KPC9zdmc+Cg==")
+	--select-icon: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEyIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xMC4yOTMgMC4yOTI5NjlMNS45OTk5NyA0LjU4NTk3TDEuNzA2OTcgMC4yOTI5NjlMMC4yOTI5NjkgMS43MDY5N0w1Ljk5OTk3IDcuNDEzOTdMMTEuNzA3IDEuNzA2OTdMMTAuMjkzIDAuMjkyOTY5WiIgZmlsbD0iYmxhY2siLz4KPC9zdmc+Cg==");
 	--select-icon-size: 14px;
 	--select-icon-position: top 15px right 12px;
 }
