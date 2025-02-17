@@ -16,4 +16,8 @@
 	--input-height: 40px;
 
 	--input-padding-x: 16px;
+
+	--input-disabled-background-color: var(--color-zinc-100);
+	--input-read-only-background-color: var(--color-zinc-100);
+	--input-autofilled-background-color: var(--color-indigo-100);
 }
