@@ -147,8 +147,6 @@
 		.form-radio:checked::after {
 			@apply content-[''] absolute inset-0 m-auto bg-no-repeat
 			 w-(--radio-icon-width) h-(--radio-icon-height) bg-(image:--radio-icon);
-
-			filter: var(--radio-icon-color);
 		}
 
 		.form-radio + label {
@@ -187,8 +185,6 @@
 		.form-checkbox:checked::after {
 			@apply content-[''] absolute inset-0 m-auto bg-no-repeat
 			 w-(--check-icon-width) h-(--check-icon-height) bg-(image:--check-icon);
-
-			filter: var(--check-icon-color);
 		}
 
 		.form-check + label,
@@ -219,7 +215,7 @@
 			<h1 class="text-zinc-700 font-semibold text-4xl/none mb-12">Formulario contacto</h1>
 			<div class="grid grid-cols-12 gap-x-5 gap-y-4">
 				<div class="col-span-6">
-					<label class="form-label" for="nombre">Nombre</label>
+					<label class="form-label md:text-xl!" for="nombre">Nombre</label>
 					<input class="form-input" type="text" placeholder="placeholder nombre">
 				</div>
 				<div class="col-span-6">

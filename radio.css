@@ -15,10 +15,6 @@
 	/* Icono radio */
 	--radio-icon-width: 14px;
 	--radio-icon-height: 14px;
-	/*
-		La otra forma de hacer el color customizable (y mucho más sencilla) es mediante el uso de "mask", pero no es compatible con todos los navegadores.
-		Para convertir el color hexadecimal a este filtro, usar este conversor: https://isotropic.co/tool/hex-color-to-css-filter/
-	*/
-	--radio-icon: url('data:image/svg+xml;utf8,<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>');
-	--radio-icon-color: invert(77%) sepia(0%) saturate(3716%) hue-rotate(198deg) brightness(119%) contrast(107%);
+
+	--radio-icon: url('data:image/svg+xml;utf8,<svg fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>');
 }

@@ -15,10 +15,5 @@
 	/* Icono check */
 	--check-icon-width: 16px;
 	--check-icon-height: 16px;
-	/*
-		La otra forma de hacer el color customizable (y mucho más sencilla) es mediante el uso de "mask", pero no es compatible con todos los navegadores.
-		Para convertir el color hexadecimal a este filtro, usar este conversor: https://isotropic.co/tool/hex-color-to-css-filter/
-	*/
-	--check-icon: url('data:image/svg+xml;utf8,<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>');
-	--check-icon-color: invert(77%) sepia(0%) saturate(3716%) hue-rotate(198deg) brightness(119%) contrast(107%);
+	--check-icon: url('data:image/svg+xml;utf8,<svg fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>');
 }
