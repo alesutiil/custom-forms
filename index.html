@@ -24,6 +24,12 @@
 			--form-border-color: #ccc;
 			--form-border-rounded: 8px;
 			--form-border-color-focus: #000;
+			--form-border-color-hover: #000;
+			--form-padding-x: 12px;
+
+			--form-transition-property: border;
+			--form-transition-duration: 300ms;
+			--form-transition-timing-function: ease-in-out;
 		}
 
 
@@ -43,15 +49,17 @@
 
 		.form-input {
 			@apply
-			 flex items-center appearance-none
+			 flex items-center appearance-none transform
 			 text-(length:--input-font-size) font-(family-name:--input-font-family)
 			 text-(--input-text-color) bg-(--input-background-color) placeholder:text-(--input-text-color-placeholder)
 			 border-(length:--input-border-size) border-(--input-border-color) rounded-(--input-border-rounded)
 			 w-(--input-width) h-(--input-height)
 			 px-(--input-padding-x)
+			 transition-(--input-transition-property) duration-(--form-transition-duration) ease-(--form-transition-timing-function)
 			 focus:outline-none focus:border-(--input-border-color-focus)
-			 disabled:bg-(--input-disabled-background-color) disabled:cursor-not-allowed
-			 read-only:bg-(--input-read-only-background-color) read-only:cursor-not-allowed focus:read-only:border-(--input-border-color)
+			 hover:border-(--input-border-color-hover)
+			 disabled:bg-(--input-disabled-background-color) disabled:cursor-not-allowed disabled:transition-none hover:disabled:border-(--input-border-color)
+			 read-only:bg-(--input-read-only-background-color) read-only:cursor-not-allowed focus:read-only:border-(--input-border-color) read-only:transition-none hover:read-only:border-(--input-border-color)
 			 autofill:bg-(--input-autofilled-background-color);
 		}
 
@@ -88,12 +96,14 @@
 
 
 		.form-textarea {
-			@apply block appearance-none resize-none field-sizing-content
+			@apply block appearance-none resize-none field-sizing-content transform
 			 text-(length:--textarea-font-size) font-(family-name:--textarea-font-family)
 			 text-(--textarea-text-color) bg-(--textarea-background-color) placeholder:text-(--textarea-text-color-placeholder)
 			 border-(length:--textarea-border-size) border-(--textarea-border-color) rounded-(--textarea-border-rounded)
 			 w-(--textarea-width) min-h-(--textarea-min-height)
 			 px-(--textarea-padding-x) py-(--textarea-padding-y)
+			 transition-(--textarea-transition-property) duration-(--form-transition-duration) ease-(--form-transition-timing-function)
+			 hover:border-(--textarea-border-color-hover)
 			 focus:outline-none focus:border-(--input-border-color-focus);
 		}
 
@@ -105,7 +115,9 @@
 			 border-(length:--select-border-size) border-(--select-border-color) rounded-(--select-border-rounded)
 			 w-(--select-width) h-(--select-height)
 			 px-(--select-padding-left) pr-(--select-padding-right)
+			 transition-(--select-transition-property) duration-(--form-transition-duration) ease-(--form-transition-timing-function)
 			 focus:outline-none focus:border-(--select-border-color-focus)
+			 hover:border-(--select-border-color-hover)
 			 bg-(image:--select-icon) bg-no-repeat bg-(length:--select-icon-size) bg-(position:--select-icon-position);
 		}
 

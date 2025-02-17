@@ -10,12 +10,15 @@
 	--select-border-color: var(--form-border-color);
 	--select-border-rounded: var(--form-border-rounded);
 	--select-border-color-focus: var(--form-border-color-focus);
+	--select-border-color-hover: var(--form-border-color-hover);
 
 	--select-width: 100%;
 	--select-height: 40px;
 
 	--select-padding-left: 12px;
 	--select-padding-right: calc(var(--select-icon-size) + 25px);
+
+	--select-transition-property: var(--form-transition-property);
 
 	/* Icono select */
 	/* Hay que convertir la imagen a base64 (https://base64.guru/converter/encode/image/svg) */
