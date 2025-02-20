@@ -1,0 +1,18 @@
+:root {
+
+	--check-background-color: var(--form-background-color);
+
+	--check-border-size: var(--form-border-size);
+	--check-border-color: var(--form-border-color);
+	--check-border-rounded: 2px;
+
+	--check-size: 20px;
+
+	--check-checked-border-color: var(--form-border-color-focus);
+	--check-checked-background-color: var(--form-border-color-focus);
+
+	/* Icono check */
+	--check-icon-width: 16px;
+	--check-icon-height: 16px;
+	--check-icon: url('data:image/svg+xml;utf8,<svg fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>');
+}

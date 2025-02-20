@@ -1,0 +1,22 @@
+:root {
+
+	--radio-background-color: var(--form-background-color);
+
+	--radio-border-size: var(--form-border-size);
+	--radio-border-color: var(--form-border-color);
+	--radio-border-rounded: 100%;
+
+	--radio-size: 20px;
+
+	--radio-checked-border-color: var(--form-border-color-focus);
+	--radio-checked-background-color: var(--form-border-color-focus);
+
+	--radio-outline-offset-size: var(--form-outline-offset-size);
+	--radio-outline-offset-color: var(--form-outline-offset-color);
+
+	/* Icono radio */
+	--radio-icon-width: 14px;
+	--radio-icon-height: 14px;
+
+	--radio-icon: url('data:image/svg+xml;utf8,<svg fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>');
+}

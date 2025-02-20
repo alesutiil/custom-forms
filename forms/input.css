@@ -1,0 +1,29 @@
+:root {
+
+	--input-font-size: var(--form-font-size);
+	--input-font-family: var(--form-font-family);
+
+	--input-text-color: var(--form-text-color);
+	--input-text-color-placeholder: var(--form-text-color-placeholder);
+	--input-background-color: var(--form-background-color);
+
+	--input-border-size: var(--form-border-size);
+	--input-border-color: var(--form-border-color);
+	--input-border-rounded: var(--form-border-rounded);
+	--input-border-color-focus: var(--form-border-color-focus);
+	--input-border-color-hover: var(--form-border-color-hover);
+
+	--input-outline-offset-size: var(--form-outline-offset-size);
+	--input-outline-offset-color: var(--form-outline-offset-color);
+
+	--input-width: 100%;
+	--input-height: 40px;
+
+	--input-padding-x: var(--form-padding-x);
+
+	--input-disabled-background-color: var(--color-zinc-100);
+	--input-read-only-background-color: var(--color-zinc-100);
+	--input-autofilled-background-color: var(--color-indigo-100);
+
+	--input-transition-property: var(--form-transition-property);
+}
