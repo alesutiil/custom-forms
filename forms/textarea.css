@@ -13,8 +13,8 @@
 	--textarea-border-color-focus: var(--form-border-color-focus);
 	--textarea-border-color-hover: var(--form-border-color-hover);
 
-	--textarea-outline-offset-size: var(--form-outline-offset-size);
-	--textarea-outline-offset-color: var(--form-outline-offset-color);
+	--textarea-outline-size: var(--form-outline-size);
+	--textarea-outline-color: var(--form-outline-color);
 
 	--textarea-width: 100%;
 	--textarea-min-height: 120px;

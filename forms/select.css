@@ -12,8 +12,8 @@
 	--select-border-color-focus: var(--form-border-color-focus);
 	--select-border-color-hover: var(--form-border-color-hover);
 
-	--select-outline-offset-size: var(--form-outline-offset-size);
-	--select-outline-offset-color: var(--form-outline-offset-color);
+	--select-outline-size: var(--form-outline-size);
+	--select-outline-color: var(--form-outline-color);
 
 	--select-width: 100%;
 	--select-height: 40px;

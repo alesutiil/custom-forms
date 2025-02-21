@@ -10,8 +10,6 @@
 	<style type="text/tailwindcss">
 
 		@theme {
-			--font-sans: 'Roboto', sans-serif;
-			--font-shakarif: 'Shafarik', sans-serif;
 			--form-font-size: 16px;
 			--form-font-family: inherit;
 			--form-font-line-height: 1.2;
@@ -26,8 +24,8 @@
 			--form-border-color-focus: #000;
 			--form-border-color-hover: #000;
 
-			--form-outline-offset-size: 1px;
-			--form-outline-offset-color: #000;
+			--form-outline-size: 1px;
+			--form-outline-color: #000;
 
 			--form-padding-x: 12px;
 
@@ -61,7 +59,7 @@
 			 px-(--input-padding-x)
 			 transition-(--input-transition-property) duration-(--form-transition-duration) ease-(--form-transition-timing-function)
 			 focus:border-(--input-border-color-focus)
-			 focus:outline-offset-(--input-outline-offset-size) focus:outline-(--input-outline-offset-color)
+			 focus:outline-(length:--input-outline-size) focus:outline-(--input-outline-color)
 			 hover:border-(--input-border-color-hover)
 			 disabled:bg-(--input-disabled-background-color) disabled:cursor-not-allowed disabled:transition-none hover:disabled:border-(--input-border-color)
 			 read-only:bg-(--input-read-only-background-color) read-only:cursor-not-allowed focus:read-only:border-(--input-border-color) read-only:transition-none hover:read-only:border-(--input-border-color)
@@ -110,7 +108,7 @@
 			 transition-(--textarea-transition-property) duration-(--form-transition-duration) ease-(--form-transition-timing-function)
 			 hover:border-(--textarea-border-color-hover)
 			 focus:border-(--textarea-border-color-focus)
-			 focus:outline-offset-(--textarea-outline-offset-size) focus:outline-(--textarea-outline-offset-color);
+			 focus:outline-(length:--textarea-outline-size) focus:outline-(--textarea-outline-color)
 		}
 
 
@@ -123,7 +121,7 @@
 			 px-(--select-padding-left) pr-(--select-padding-right)
 			 transition-(--select-transition-property) duration-(--form-transition-duration) ease-(--form-transition-timing-function)
 			 focus:border-(--select-border-color-focus)
-			 focus:outline-offset-(--select-outline-offset-size) focus:outline-(--select-outline-offset-color)
+			 focus:outline-(length:--select-outline-size) focus:outline-(--select-outline-color)
 			 hover:border-(--select-border-color-hover)
 			 bg-(image:--select-icon) bg-no-repeat bg-(length:--select-icon-size) bg-(position:--select-icon-position);
 		}

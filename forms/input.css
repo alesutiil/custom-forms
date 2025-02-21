@@ -13,8 +13,8 @@
 	--input-border-color-focus: var(--form-border-color-focus);
 	--input-border-color-hover: var(--form-border-color-hover);
 
-	--input-outline-offset-size: var(--form-outline-offset-size);
-	--input-outline-offset-color: var(--form-outline-offset-color);
+	--input-outline-size: var(--form-outline-size);
+	--input-outline-color: var(--form-outline-color);
 
 	--input-width: 100%;
 	--input-height: 40px;

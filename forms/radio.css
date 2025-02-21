@@ -11,9 +11,6 @@
 	--radio-checked-border-color: var(--form-border-color-focus);
 	--radio-checked-background-color: var(--form-border-color-focus);
 
-	--radio-outline-offset-size: var(--form-outline-offset-size);
-	--radio-outline-offset-color: var(--form-outline-offset-color);
-
 	/* Icono radio */
 	--radio-icon-width: 14px;
 	--radio-icon-height: 14px;
